@@ -16,6 +16,17 @@
   <body>
       <div class="container">
         <h1>@yield('title')<span class="badge badge-primary"></span></h1><hr/>
+        @if(session()->has('success'))
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading"></h4>
+              <p class="mb-0">
+                <strong>{{session('success')}}</strong> 
+              </p>
+            </div>
+            <script>
+              $(".alert").alert();
+            </script>
+        @endif
         <div class="row">
             <div class="col-xl-1-12">
                 @yield('content')
