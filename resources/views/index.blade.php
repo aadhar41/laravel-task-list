@@ -3,21 +3,28 @@
 @section('title', 'Tasks List')
 
 @section('content')
-<div class="jumbotron jumbotron-fluid">
-    <div class="container card p-4">
-        <h1 class="display-3">Tasks Lists</h1>
-        <p class="lead">All created tasks</p>
-        <hr class="my-2">
-        <p>
-            @forelse ($tasks as $task)
-            <a href="{{ route('tasks.show', ['task' => $task->id]) }}" class="btn btn-primary mb-2" >{{ $task->title }}</a><br>
-            @empty
-            No tasks yet!
-            @endforelse
-        </p>
-        @if ($tasks->count())
-            {{ $tasks->links() }}
-        @endif
+    <div class="">
+        <div class="">
+            <nav class="mb-4">
+                <a href="{{ route('tasks.create') }}" @class(['link'])><i class="fas fa-plus-circle"></i> Add
+                    Task!</a>
+            </nav>
+
+            <hr class="my-2">
+            <p>
+                @forelse ($tasks as $task)
+                    <a href="{{ route('tasks.show', ['task' => $task->id]) }}"
+                        @class(['line-through' => $task->completed])>{{ $task->title }}</a><br>
+                @empty
+                    No tasks yet!
+                @endforelse
+            </p>
+
+            @if ($tasks->count())
+                <nav class="mt-7">
+                    {{ $tasks->links() }}
+                </nav>
+            @endif
+        </div>
     </div>
-</div>
 @endsection

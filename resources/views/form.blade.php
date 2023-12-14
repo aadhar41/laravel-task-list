@@ -9,36 +9,46 @@
             @method('PUT')
         @endisset
 
-        <div class="form-group">
-          <label for="title">Title</label>
-          <input type="text" class="form-control @error('title') is-invalid @else is-valid @enderror" name="title" id="title" aria-describedby="helpId" placeholder="Title" value="{{ $task->title ?? old('title') }}">
-          @error('title')
-          <small id="errorTitle" class="form-text text-danger">{{ $message }}</small>
-          @enderror
+        <div class="form-group mb-4">
+            <label class="label" for="title">Title</label>
+            <input type="text" @class(['border-red-500' => $errors->has('title')])
+                class="input form-control @error('title') is-invalid @else is-valid @enderror" name="title" id="title"
+                aria-describedby="helpId" placeholder="Title" value="{{ $task->title ?? old('title') }}">
+            @error('title')
+                <small id="errorTitle" class="error">{{ $message }}</small>
+            @enderror
         </div>
 
-        <div class="form-group">
-          <label for="description">Description</label>
-          <textarea class="form-control @error('description') is-invalid @else is-valid @enderror" name="description" id="description" rows="5">{{$task->description ?? old('description')}}</textarea>
-          @error('description')
-          <small id="errorDescription" class="form-text text-danger">{{ $message }}</small>
-          @enderror
+        <div class="form-group mb-4">
+            <label class="label" for="description">Description</label>
+            <textarea placeholder="Description" @class(['textarea', 'border-red-500' => $errors->has('description')]) name="description" id="description" rows="5">{{ $task->description ?? old('description') }}</textarea>
+            @error('description')
+                <small id="errorDescription" class="error">{{ $message }}</small>
+            @enderror
         </div>
-        
-        <div class="form-group">
-          <label for="long_description">Long Description</label>
-          <textarea class="form-control @error('long_description') is-invalid @else is-valid @enderror" name="long_description" id="long_description" rows="10">{{$task->long_description ?? old('long_description')}}</textarea>
-          @error('long_description')
-          <small id="errorLongDescription" class="form-text text-danger">{{ $message }}</small>
-          @enderror
+
+        <div class="form-group mb-4">
+            <label class="label" for="long_description">Long Description</label>
+            <textarea placeholder="Long Description" @class([
+                'textarea',
+                'border-red-500' => $errors->has('long_description'),
+            ]) name="long_description" id="long_description"
+                rows="10">{{ $task->long_description ?? old('long_description') }}</textarea>
+            @error('long_description')
+                <small id="errorLongDescription" class="error">{{ $message }}</small>
+            @enderror
         </div>
-        <hr>
-        <button type="submit" class="btn btn-primary">
-            @isset($task)
-                Update Task
-            @else    
-                Add Task
-            @endisset
-        </button>
+
+        <div class="flex items-center gap-2">
+
+            <button type="submit" class="btn">
+                @isset($task)
+                    Update Task
+                @else
+                    Add Task
+                @endisset
+            </button>
+            <a href="{{ route('tasks.index') }}" @class(['link'])>Cancel</a>
+        </div>
     </form>
 @endsection
