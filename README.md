@@ -15,8 +15,8 @@ Laravel Task List is a streamlined task management application built using the L
 - ✅ **RESTful API Support** – Seamless integration for future expansion.
   
 ## Technologies Used
-- **Backend:** Laravel (PHP)
-- **Frontend:** Blade Templates, Bootstrap, JavaScript, CSS
+- **Backend:** Laravel 10 (PHP)
+- **Frontend:** Blade Templates, Bootstrap, JavaScript, CSS, HTML5, Tailwind CSS, jQuery, Bootstrap
 - **Database:** MySQL
 - **Version Control:** Git & GitHub
 - **API Support:** RESTful APIs for external integrations
@@ -51,17 +51,6 @@ Ensure you have the following installed on your system:
 <img src="https://github.com/aadhar41/laravel-task-list/blob/master/public/tasks-list-edit-task.png" alt="Edit Task" />
 
 <img src="https://github.com/aadhar41/laravel-task-list/blob/master/public/tasks-list-view-task.png" alt="View Task" />
-
-## Built With
-
-* HTML5
-* CSS3
-* JavaScript
-* jQuery
-* Laravel 10
-* MySql
-* Tailwind CSS
-* Bootstrap
 
 ## Usage
 
