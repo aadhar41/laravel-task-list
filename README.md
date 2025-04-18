@@ -1,8 +1,5 @@
-# Task List Application
-
+# Laravel Task List Application
 Welcome to task lis application. Here you will find an application, which is used to manage a task list i.e. View all list create, update & delete a task.
-
-# Laravel Task List
 
 ## Overview
 Laravel Task List is a streamlined task management application built using the Laravel framework. It helps users organize, track, and manage their daily tasks efficiently with an intuitive UI and robust backend functionalities.
