@@ -2,6 +2,42 @@
 
 Welcome to task lis application. Here you will find an application, which is used to manage a task list i.e. View all list create, update & delete a task.
 
+# Laravel Task List
+
+## Overview
+Laravel Task List is a streamlined task management application built using the Laravel framework. It helps users organize, track, and manage their daily tasks efficiently with an intuitive UI and robust backend functionalities.
+
+## Features
+- ✅ **Task Creation & Management** – Add, update, and delete tasks effortlessly.
+- ✅ **User Authentication** – Secure login and registration system.
+- ✅ **Task Prioritization** – Categorize tasks based on priority levels.
+- ✅ **Due Date Reminders** – Keep track of deadlines with notifications.
+- ✅ **CRUD Operations** – Fully functional Create, Read, Update, and Delete capabilities.
+- ✅ **Responsive UI** – Optimized for both desktop and mobile usage.
+- ✅ **Database Integration** – Uses MySQL for storing and managing task data.
+- ✅ **RESTful API Support** – Seamless integration for future expansion.
+  
+## Technologies Used
+- **Backend:** Laravel (PHP)
+- **Frontend:** Blade Templates, Bootstrap, JavaScript, CSS
+- **Database:** MySQL
+- **Version Control:** Git & GitHub
+- **API Support:** RESTful APIs for external integrations
+
+## Installation Guide
+### Prerequisites
+Ensure you have the following installed on your system:
+- PHP (v8.x recommended)
+- Composer
+- MySQL
+- Laravel CLI
+- Git
+
+### Setup Instructions
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/aadhar41/laravel-task-list.git
+
 ## Sections
 
 1. Home: Task list.
